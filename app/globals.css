@@ -1,0 +1,124 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(18, 73, 111, 0.28), transparent 35%),
+    radial-gradient(circle at 50% 48%, rgba(185, 133, 47, 0.08), transparent 40%),
+    #07090b;
+  color: #f2eadb;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.home {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 44px 32px;
+  text-align: center;
+}
+
+.home::before {
+  position: absolute;
+  z-index: -1;
+  width: min(70vw, 680px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(191, 145, 66, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(176, 126, 42, 0.05), transparent 68%);
+  content: "";
+}
+
+.overline,
+.number,
+.status {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.overline {
+  margin: 0 0 22px;
+  color: #c5a55d;
+  font-size: 0.75rem;
+}
+
+.emblem {
+  width: clamp(240px, 34vw, 440px);
+  aspect-ratio: 1;
+  filter:
+    drop-shadow(0 20px 24px rgba(0, 0, 0, 0.58))
+    drop-shadow(0 0 30px rgba(196, 148, 63, 0.12));
+}
+
+.emblem img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 26px 0 8px;
+  font-size: clamp(2.7rem, 6vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.number {
+  margin: 0 0 16px;
+  color: #c5a55d;
+  font-size: 0.72rem;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0;
+  color: #bdb4a6;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  margin: 22px 0;
+  background: #9c7938;
+}
+
+.status {
+  margin: 0;
+  color: #777066;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 640px) {
+  .home {
+    justify-content: flex-start;
+    padding: 38px 20px 44px;
+  }
+
+  .emblem {
+    width: min(78vw, 340px);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 13vw, 4.2rem);
+  }
+}
