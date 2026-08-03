@@ -9,8 +9,8 @@ export default function Home() {
         <Image
           src="/emblema-fraternitatis.png"
           alt="Emblema de Fraternitatis Universalis, Ouroboros et Lucis Filli No. 433"
-          width={1371}
-          height={1371}
+          width={1254}
+          height={1254}
           priority
         />
       </div>
